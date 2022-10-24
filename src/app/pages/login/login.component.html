@@ -1,0 +1,47 @@
+<main class="container">
+  <header class="login-header">
+    <a href="">
+      <img class="logo" src="../../../assets/images/logo.svg" alt=""/>
+    </a>
+    <p nz-typography>
+      <span nz-icon nzType="global" nzTheme="outline"></span>简体中文
+    </p>
+  </header>
+  <main class="login-view">
+    <nz-card class="nz-card" [nzBordered]="false">
+      <div class="login-card">
+        <section class="left-card">
+          <h3 nz-typography>扫码登录</h3>
+          <img class="qrcode" src="../../../assets/images/qrcode.jfif" alt=""/>
+          <p>使用微信扫一扫 登录MetaSphere</p>
+        </section>
+        <div class="br"></div>
+        <section class="right-card">
+          <h3 class="login-prompt" nz-typography>登录 MetaSphere</h3>
+          <nz-input-group class="login-input" nzSize="large" nzCompact>
+            <nz-select nzSize="large" [ngModel]="'+86'" style="width: 20%">
+              <nz-option [nzLabel]="'+86'" [nzValue]="'+86'"></nz-option>
+            </nz-select>
+            <input type="text" style="width: 80%" nz-input nzSize="large" placeholder="手机号码"/>
+          </nz-input-group>
+          <nz-input-group class="login-input" nzSize="large" [nzSuffix]="suffixTemplate">
+            <input [type]="passwordVisible ? 'text' : 'password'" [(ngModel)]="user.password" nz-input
+                   placeholder="密码"/>
+          </nz-input-group>
+          <ng-template #suffixTemplate>
+          <span nz-icon [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+                (click)="passwordVisible = !passwordVisible"></span>
+          </ng-template>
+          <button class="login-button" nz-button nzType="primary" nzSize="large">登录</button>
+          <p class="login-action">
+            <a>免费注册</a>
+            <span>忘记密码</span>
+          </p>
+        </section>
+      </div>
+    </nz-card>
+  </main>
+</main>
+
+
+
