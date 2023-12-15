@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from "../../entities/user";
+import {User} from "../../@shared/models/user";
 
 @Component({
   selector: 'app-login',
