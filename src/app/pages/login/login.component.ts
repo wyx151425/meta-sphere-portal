@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {User} from "../../@shared/models/user";
+import {Component, OnInit} from '@angular/core';
+import {LoginUser} from "../../@shared/models/dto/login-user";
 
 @Component({
   selector: 'app-login',
@@ -10,11 +10,16 @@ export class LoginComponent implements OnInit {
 
   passwordVisible: boolean = false;
 
-  user: User = {mobilePhoneNumber: "15253620357", password: "wyx151425"};
+  private loginUser: LoginUser;
 
-  constructor() { }
+  constructor() {
+    this.loginUser = new LoginUser();
+  }
 
   ngOnInit(): void {
   }
 
+  public login(): void {
+
+  }
 }
