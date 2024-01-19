@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {LoginUser} from "../../@shared/models/dto/login-user";
+import {LoginUser} from "../../models/dto/login-user";
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
   passwordVisible: boolean = false;
 
-  private loginUser: LoginUser;
+  loginUser: LoginUser;
 
   constructor() {
     this.loginUser = new LoginUser();
@@ -20,6 +20,11 @@ export class LoginComponent implements OnInit {
   }
 
   public login(): void {
+    if (null === this.loginUser.mobilePhoneNumber || "" === this.loginUser.mobilePhoneNumber) {
 
+    }
+    if (null === this.loginUser.password || "" === this.loginUser.password) {
+
+    }
   }
 }

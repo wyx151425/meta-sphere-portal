@@ -10,7 +10,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {IconsProviderModule} from './icons-provider.module';
-import {LoginComponent} from "./pages/login/login.component";
+import {LoginComponent} from "./@shared/components/login/login.component";
 import {CoreModule} from "./@core/core.module";
 import {SharedModule} from "./@shared/shared.module";
 import {NzSelectModule} from "ng-zorro-antd/select";
@@ -18,6 +18,8 @@ import {NzInputModule} from "ng-zorro-antd/input";
 import {NzTypographyModule} from "ng-zorro-antd/typography";
 import {NzButtonModule} from "ng-zorro-antd/button";
 import {NzCardModule} from "ng-zorro-antd/card";
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 registerLocaleData(zh);
 
@@ -40,6 +42,8 @@ registerLocaleData(zh);
     NzCardModule,
     NzTypographyModule,
     NzButtonModule,
+    NzLayoutModule,
+    NzMenuModule,
   ],
   providers: [{provide: NZ_I18N, useValue: zh_CN}],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <main class="container">
   <header class="login-header">
     <a href="">
-      <img class="logo" src="../../../assets/images/logo.svg" alt=""/>
+      <img class="logo" src="../../../../assets/images/logo.svg" alt=""/>
     </a>
     <p nz-typography>
       <span nz-icon nzType="global" nzTheme="outline"></span>简体中文
@@ -12,8 +12,8 @@
       <div class="login-card">
         <section class="left-card">
           <h3 nz-typography>扫码登录</h3>
-          <img class="qrcode" src="../../../assets/images/qrcode.jfif" alt=""/>
-          <p>使用微信扫一扫 登录MetaSphere Cloud</p>
+          <img class="qrcode" src="../../../../assets/images/qrcode.jfif" alt=""/>
+          <p>使用微信扫一扫 登录 MetaSphere Cloud</p>
         </section>
         <div class="br"></div>
         <section class="right-card">
@@ -25,7 +25,7 @@
             <input type="text" style="width: 80%" nz-input nzSize="large" placeholder="手机号码"/>
           </nz-input-group>
           <nz-input-group class="login-input" nzSize="large" [nzSuffix]="suffixTemplate">
-            <input [type]="passwordVisible ? 'text' : 'password'" [(ngModel)]="user.password" nz-input
+            <input [type]="passwordVisible ? 'text' : 'password'" [(ngModel)]="loginUser.password" nz-input
                    placeholder="密码"/>
           </nz-input-group>
           <ng-template #suffixTemplate>
