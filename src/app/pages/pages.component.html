@@ -8,33 +8,33 @@
     <div class="sidebar-logo">
       <a href="https://ng.ant.design/" target="_blank">
         <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
-        <h1>Ant Design Of Angular</h1>
+        <h1>MetaSphere Cloud</h1>
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
       <li nz-submenu nzOpen nzTitle="静态舆情分析" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/heatAnalysis">热度分析</a>
+            <a routerLink="/staticAnalysis/heatAnalysis">热度分析</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/emotionAnalysis">情感分析</a>
+            <a routerLink="/staticAnalysis/emotionAnalysis">情感分析</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/regionalAnalysis">地域分析</a>
+            <a routerLink="/staticAnalysis/regionalAnalysis">地域分析</a>
           </li>
         </ul>
       </li>
       <li nz-submenu nzOpen nzTitle="动态舆情分析" nzIcon="form">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/commonDeduction">普通推演</a>
+            <a routerLink="/dynamicAnalysis/commonDeduction">普通推演</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/intervenedDeduction">干预推演</a>
+            <a routerLink="/dynamicAnalysis/intervenedDeduction">干预推演</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/interactiveDeduction">交互推演</a>
+            <a routerLink="/dynamicAnalysis/interactiveDeduction">交互推演</a>
           </li>
         </ul>
       </li>

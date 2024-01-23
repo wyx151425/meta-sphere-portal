@@ -1,13 +1,14 @@
 import {ModuleWithProviders, NgModule} from "@angular/core";
-import {PublicOpinionAnalysisService} from "./services/public-opinion-analysis.service";
+import {DeductionService} from "./services/deduction.service";
 
 export const MS_PORTAL_CORE_PROVIDERS = [
-  PublicOpinionAnalysisService
+  DeductionService
 ];
 
 @NgModule({
   declarations: [],
-  imports: []
+  imports: [],
+  providers: []
 })
 export class CoreModule {
   static forRoot(): ModuleWithProviders<CoreModule> {

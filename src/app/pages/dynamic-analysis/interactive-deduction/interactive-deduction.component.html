@@ -1,1 +1,33 @@
-<p>interactive-deduction works!</p>
+<button nz-button nzType="primary" (click)="createDeductionGroup()">创建推演群组</button>
+<!--<button nz-button nzType="primary" (click)="sendMsg()">发送消息</button>-->
+<nz-modal [(nzVisible)]="isCreateDeductionGroupModalVisible" nzTitle="创建推演群组"
+          (nzOnCancel)="handleCancelCreateDeductionGroup()" (nzOnOk)="handleConfirmCreateDeductionGroup()">
+  <ng-container *nzModalContent>
+    <form nz-form [formGroup]="validateCreateDeductionGroupForm" (ngSubmit)="submitCreateDeductionGroupForm()">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzRequired>推演主题</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzHasFeedback nzErrorTip="请填写推演主题！">
+          <input nz-input type="text" formControlName="theme"/>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzRequired>群组类型</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzHasFeedback nzErrorTip="请选择推演群组类型！">
+          <input nz-input type="text" formControlName="type"/>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzRequired>干预等级</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzHasFeedback nzErrorTip="请选择推演干预等级！">
+          <input nz-input type="text" formControlName="intervenedLevel"/>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzOffset]="6" [nzSpan]="14">
+          <button nz-button nzType="primary" [disabled]="!validateCreateDeductionGroupForm.valid">提交</button>
+          <button nz-button (click)="resetCreateDeductionGroupForm($event)">重置</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </ng-container>
+</nz-modal>

@@ -6,6 +6,11 @@ import {InteractiveDeductionComponent} from "./interactive-deduction/interactive
 import {IntervenedDeductionComponent} from "./intervened-deduction/intervened-deduction.component";
 import {DynamicAnalysisRoutingModule} from "./dynamic-analysis-routing.module";
 import {DynamicAnalysisComponent} from "./dynamic-analysis.component";
+import {NzButtonModule} from "ng-zorro-antd/button";
+import {NzModalModule} from "ng-zorro-antd/modal";
+import {NzFormModule} from "ng-zorro-antd/form";
+import {NzInputModule} from "ng-zorro-antd/input";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,7 +22,13 @@ import {DynamicAnalysisComponent} from "./dynamic-analysis.component";
   imports: [
     CommonModule,
     SharedModule,
-    DynamicAnalysisRoutingModule
+    DynamicAnalysisRoutingModule,
+    NzButtonModule,
+    NzModalModule,
+    NzFormModule,
+    NzInputModule,
+    ReactiveFormsModule,
+    NgxEchartsDirective
   ]
 })
 export class DynamicAnalysisModule {

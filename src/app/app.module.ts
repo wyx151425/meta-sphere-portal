@@ -18,8 +18,10 @@ import {NzInputModule} from "ng-zorro-antd/input";
 import {NzTypographyModule} from "ng-zorro-antd/typography";
 import {NzButtonModule} from "ng-zorro-antd/button";
 import {NzCardModule} from "ng-zorro-antd/card";
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
+import {NzLayoutModule} from 'ng-zorro-antd/layout';
+import {NzMenuModule} from 'ng-zorro-antd/menu';
+import {NzMessageService} from "ng-zorro-antd/message";
+import {NgxEchartsModule} from "ngx-echarts";
 
 registerLocaleData(zh);
 
@@ -35,6 +37,7 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
+    NgxEchartsModule,
     CoreModule.forRoot(),
     SharedModule.forRoot(),
     NzInputModule,
@@ -45,7 +48,8 @@ registerLocaleData(zh);
     NzLayoutModule,
     NzMenuModule,
   ],
-  providers: [{provide: NZ_I18N, useValue: zh_CN}],
+  providers: [
+    NzMessageService, {provide: NZ_I18N, useValue: zh_CN}],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "meta-society-web": {
+    "meta-sphere-portal": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/meta-society-web",
+            "outputPath": "dist/meta-sphere-portal",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -81,10 +81,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "meta-society-web:build:production"
+              "browserTarget": "meta-sphere-portal:build:production"
             },
             "development": {
-              "browserTarget": "meta-society-web:build:development"
+              "browserTarget": "meta-sphere-portal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -92,7 +92,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "meta-society-web:build"
+            "browserTarget": "meta-sphere-portal:build"
           }
         },
         "test": {
@@ -117,5 +117,5 @@
       }
     }
   },
-  "defaultProject": "meta-society-web"
+  "defaultProject": "meta-sphere-portal"
 }
