@@ -2,8 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NzMessageService} from "ng-zorro-antd/message";
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {DeductionService} from "../../../@core/services/deduction.service";
-import * as Stomp from "stompjs";
-import * as SockJS from "sockjs-client";
+var SockJS = require("sockjs-client");
+var Stomp = require("stompjs");
 
 @Component({
   selector: 'app-interactive-deduction',

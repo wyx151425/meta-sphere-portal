@@ -11,6 +11,7 @@ import {NzModalModule} from "ng-zorro-antd/modal";
 import {NzFormModule} from "ng-zorro-antd/form";
 import {NzInputModule} from "ng-zorro-antd/input";
 import {ReactiveFormsModule} from "@angular/forms";
+import {NgxEchartsDirective, NgxEchartsModule} from "ngx-echarts";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     NzFormModule,
     NzInputModule,
     ReactiveFormsModule,
-    NgxEchartsDirective
+    NgxEchartsModule
   ]
 })
 export class DynamicAnalysisModule {

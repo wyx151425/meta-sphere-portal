@@ -37,7 +37,9 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
-    NgxEchartsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    }),
     CoreModule.forRoot(),
     SharedModule.forRoot(),
     NzInputModule,
